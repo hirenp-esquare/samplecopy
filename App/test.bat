@@ -7,4 +7,6 @@ echo AGENT_BUILDDIRECTORY contents:
 @dir %AGENT_BUILDDIRECTORY%
 echo BUILD_SOURCESDIRECTORY contents:
 @dir %BUILD_SOURCESDIRECTORY%
+echo Specific Directory contents:
+@dir 'demo\Model'
 echo Over and out.
