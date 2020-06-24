@@ -21,16 +21,13 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-    
-    - name: secrets
-      run: ${{ secrets.Test }}
-    
+      
       # Runs a single command using the runners shell
     - name: Run a one-line script
       run: demo\vensim demo\Model\test.cmd
       
     - name: Run a Deploy script
-      run: 'DeployFiles\deploy "demo\Model\agg_v15_2019_06_14.vmf"'
+      run: 'DeployFiles\deploy ${{ secrets.Test }} "demo\Model\agg_v15_2019_06_14.vmf"'
     
     - name: Run a BAT script
       run: 'App/test.bat'
