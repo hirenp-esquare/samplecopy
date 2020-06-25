@@ -27,7 +27,7 @@ jobs:
       run: demo\vensim demo\Model\test.cmd
       
     - name: Run a Deploy script
-      run: 'DeployFiles\deploy "demo\Model\agg_v15_2019_06_14.vmf"'
+      run: 'DeployFiles\deploy ${{ secrets.Test }} "demo\Model\agg_v15_2019_06_14.vmf"'
     
     - name: Run a BAT script
       run: 'App/test.bat'
