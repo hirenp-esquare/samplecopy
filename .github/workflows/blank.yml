@@ -25,7 +25,6 @@ jobs:
     - name: Build and publish
       env:
         SUPER_SECRET: ${{ secrets.TEST }}
-       
       
       # Runs a single command using the runners shell
     - name: Run a one-line script
